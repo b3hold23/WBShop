@@ -3,8 +3,14 @@ import windBreaker from './productData';
 import './assets/App.css'
 
 function App() {
-  const [selectedVariant, getSelectedVariant] = useState(windBreaker.variants[0]);
+  const [selectedVariant, setSelectedVariant] = useState(windBreaker.variants[0]);
   const [message, setMessage] = useState("");
+
+  const handleVariantChange = (e) => {
+    const variant = windBreaker.variants.find(v => v.id === e.target.value);
+    setSelectedVariant(variant);
+    setMessage("");
+  };
 
   return (
     <>
