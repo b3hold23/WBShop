@@ -19,7 +19,7 @@ function App() {
       return;
     }
 
-    pixelSim(addToCart, {
+    pixelSim("Added to cart", {
       product: windBreaker.title,
       variant: selectedVariant.label,
       price: selectedVariant.price
